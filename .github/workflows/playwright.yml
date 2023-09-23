@@ -27,5 +27,6 @@ jobs:
         retention-days: 30
 
     - name: Upload screenshots to argos-ci.com
+      if: always()
       continue-on-error: true
       run: npm exec argos upload ./screenshots
